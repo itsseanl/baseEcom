@@ -46,6 +46,7 @@
 							<span id="bar2" class="activatenavbar"></span>
 							<span id="bar3" class="activatenavbar"></span>
 						</div>
+						<a class="cart-customlocation hidden sm:hidden md:hidden lg:block" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e('View your shopping cart'); ?>"><?php echo sprintf(_n('%d item', '%d items', WC()->cart->get_cart_contents_count()), WC()->cart->get_cart_contents_count()); ?> - <?php echo WC()->cart->get_cart_total(); ?></a>
 						<a href="/cart/"><i class="fas fa-shopping-cart"></i></a>
 						<a href="/contact/"><i class="fas fa-envelope desktophide"></i></a>
 					</div>

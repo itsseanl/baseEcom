@@ -188,12 +188,19 @@ if (defined('JETPACK__VERSION')) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+function mytheme_add_woocommerce_support()
+{
+	add_theme_support('woocommerce');
+}
+add_action('after_setup_theme', 'mytheme_add_woocommerce_support');
+
 /**
  * Load WooCommerce compatibility file.
  */
 if (class_exists('WooCommerce')) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
+
 
 
 /**
@@ -281,3 +288,11 @@ function acf_load_featured_product_choices($field)
 }
 
 add_filter('acf/load_field/name=featured_category', 'acf_load_featured_product_choices');
+
+remove_action('action_woocommerce_before_shop_loop_item_title', 'woocommerce_before_shop_loop_item_title');
+function baseEcom_before_shop_loop_item_title()
+{
+	woocommerce_get_product_thumbnail($size = 'woocommerce_thumbnail', $deprecated1 = 0, $deprecated2 = 0);
+	woocommerce_show_product_loop_sale_flash();
+}
+add_action('action_woocommerce_before_shop_loop_item_title', 'baseEcom');

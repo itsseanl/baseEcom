@@ -23,6 +23,11 @@ get_header();
     <?php get_template_part('template-parts/content', 'featuredcats'); ?>
 </main><!-- #main -->
 
+<div class="sidebar-wrapper bg-gray-200">
+    <div class="custom-wrapper p-2 ">
+        <?php get_sidebar(); ?>
+    </div>
+</div>
+
 <?php
-// get_sidebar();
 get_footer();
