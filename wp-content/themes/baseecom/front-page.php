@@ -17,9 +17,10 @@ get_header();
 ?>
 
 <main id="primary" class="site-main">
+    <!-- Hero Slider -->
     <?php get_template_part('template-parts/content', 'heroslider'); ?>
-
-    <?php get_template_part('template-parts/content', 'bestsellers'); ?>
+    <!-- Featured Product Categories -->
+    <?php get_template_part('template-parts/content', 'featuredcats'); ?>
 </main><!-- #main -->
 
 <?php

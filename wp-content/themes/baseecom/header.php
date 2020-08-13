@@ -46,6 +46,7 @@
 							<span id="bar2" class="activatenavbar"></span>
 							<span id="bar3" class="activatenavbar"></span>
 						</div>
+						<a href="/cart/"><i class="fas fa-shopping-cart"></i></a>
 						<a href="/contact/"><i class="fas fa-envelope desktophide"></i></a>
 					</div>
 					<nav id="site-navigation" class="main-navigation">

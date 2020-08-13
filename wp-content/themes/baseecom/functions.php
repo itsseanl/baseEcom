@@ -224,23 +224,50 @@ function my_acf_op_init()
 
 function acf_load_featured_product_choices($field)
 {
+	$choices = [];
 
-	// reset choices
-	$field['choices'] = array();
+	$taxonomy     = 'product_cat';
+	$orderby      = 'name';
+	$show_count   = 0;      // 1 for yes, 0 for no
+	$pad_counts   = 0;      // 1 for yes, 0 for no
+	$hierarchical = 1;      // 1 for yes, 0 for no  
+	$title        = '';
+	$empty        = 0;
 
+	$args = array(
+		'taxonomy'     => $taxonomy,
+		'orderby'      => $orderby,
+		'show_count'   => $show_count,
+		'pad_counts'   => $pad_counts,
+		'hierarchical' => $hierarchical,
+		'title_li'     => $title,
+		'hide_empty'   => $empty
+	);
+	$all_categories = get_categories($args);
+	foreach ($all_categories as $cat) {
+		if ($cat->category_parent == 0) {
+			$category_id = $cat->term_id;
+			array_push($choices, $cat->name);
 
-	// get the textarea value from options page without any formatting
-	$choices = get_field('my_select_values', 'option', false);
-
-
-	// explode the value so that each line is a new array piece
-	$choices = explode("\n", $choices);
-
-
-	// remove any unwanted white space
-	$choices = array_map('trim', $choices);
-
-
+			$args2 = array(
+				'taxonomy'     => $taxonomy,
+				'child_of'     => 0,
+				'parent'       => $category_id,
+				'orderby'      => $orderby,
+				'show_count'   => $show_count,
+				'pad_counts'   => $pad_counts,
+				'hierarchical' => $hierarchical,
+				'title_li'     => $title,
+				'hide_empty'   => $empty
+			);
+			$sub_cats = get_categories($args2);
+			if ($sub_cats) {
+				foreach ($sub_cats as $sub_category) {
+					array_push($choices, $sub_category->name);
+				}
+			}
+		}
+	}
 	// loop through array and add to field 'choices'
 	if (is_array($choices)) {
 
@@ -249,10 +276,8 @@ function acf_load_featured_product_choices($field)
 			$field['choices'][$choice] = $choice;
 		}
 	}
-
-
 	// return the field
 	return $field;
 }
 
-add_filter('acf/load_field/name=color', 'acf_load_featured_product_choices');
+add_filter('acf/load_field/name=featured_category', 'acf_load_featured_product_choices');

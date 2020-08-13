@@ -1,0 +1,13 @@
+.featured-cat {
+	overflow: auto;
+	> .products {
+		display: flex;
+		.product {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			padding: 15px;
+		}
+	}
+}
