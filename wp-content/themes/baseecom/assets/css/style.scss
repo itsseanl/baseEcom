@@ -1,0 +1,139 @@
+/*!
+Theme Name: baseecom
+Theme URI: http://underscores.me/
+Author: Sean Lyons
+Author URI: https://itsseanl.com
+Description: A simple to use, easy to implement theme to get e-commerce running quickly!
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: baseecom
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+GetOnline is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+
+# Normalize
+# Tailwind
+
+/*--------------------------------------------------------------
+
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+@import "normalize";
+
+/*--------------------------------------------------------------
+# Tailwind
+--------------------------------------------------------------*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*--------------------------------------------------------------
+# Header/Nav
+--------------------------------------------------------------*/
+
+@import "header/index";
+
+/*--------------------------------------------------------------
+# Custom
+--------------------------------------------------------------*/
+
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+}
+a {
+	text-decoration: none;
+	color: #333;
+	transition: 0.3s all;
+	&:hover {
+		// color: $accent-color;
+	}
+}
+hr {
+	border-width: 0 0 2px;
+	--border-opacity: 1;
+	border-color: #edf2f7;
+	border-color: rgba(237, 242, 247, var(--border-opacity));
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+ul {
+	list-style: none;
+	padding-left: 0;
+}
+
+h1 {
+	font-weight: 700;
+	font-size: 2em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "RobotoCondensed", sans-serif;
+}
+
+i {
+	// color: $secondary-accent;
+	font-weight: 900;
+}
+
+.underline {
+	height: 2px;
+	width: 50%;
+	display: block;
+	// background: $secondary-accent;
+	left: 0;
+	right: 0;
+}
+
+.custom-wrapper {
+	max-width: 1200px;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+.activatenavbar {
+	background: #333;
+}
+
+.demo {
+	width: 100vw;
+	height: 500px;
+}
+
+.transition {
+	-webkit-transition: 0.3s all;
+	-moz-transition: 0.3s all;
+	-o-transition: 0.3s all;
+	transition: 0.3s all;
+}
+.notransition {
+	-webkit-transition: none !important;
+	-moz-transition: none !important;
+	-o-transition: none !important;
+	transition: none !important;
+}
