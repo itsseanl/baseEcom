@@ -3731,8 +3731,11 @@ i{font-weight:900}
 .slide-overlay{max-width:600px}
 .transition{-webkit-transition:.3s all;transition:.3s all}
 .notransition{-webkit-transition:none !important;transition:none !important}
-#secondary{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:nowrap;flex-wrap:nowrap;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+#secondary{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:nowrap;flex-wrap:nowrap;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start}
 #secondary .widget{padding:2em;-webkit-box-flex:1;-ms-flex:1 1 0;flex:1 1 0}
+#secondary .widget h2{margin-top:0}
+.widget>ul,.widget>div>ul{padding-left:0}
+.widget>ul>li,.widget>div>ul>li{padding:5px 0}
 @media(min-width:640px){.container{max-width:640px}
 .sm\:container{width:100%}
 .sm\:space-y-0>:not(template) ~ :not(template){--space-y-reverse:0;margin-top:calc(0px * calc(1 - var(--space-y-reverse)));margin-bottom:calc(0px * var(--space-y-reverse))}

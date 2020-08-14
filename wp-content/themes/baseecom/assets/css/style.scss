@@ -168,9 +168,20 @@ i {
 	display: flex;
 	flex-wrap: nowrap;
 	justify-content: flex-end;
-	align-items: center;
+	align-items: flex-start;
 	.widget {
 		padding: 2em;
 		flex: 1 1 0px;
+		h2 {
+			margin-top: 0;
+		}
 	}
+}
+.widget > ul,
+.widget > div > ul {
+	padding-left: 0;
+}
+.widget > ul > li,
+.widget > div > ul > li {
+	padding: 5px 0;
 }

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying the footer
  *
@@ -11,24 +12,23 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'getonline' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'getonline' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'getonline' ), 'getonline', '<a href="https://itsseanl.com">Sean Lyons</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+<footer id="colophon" class="site-footer bg-gray-800 p-10 flex justify-end">
+
+	<div class="site-info custom-wrapper text-white w-full flex justify-end items-center">
+		<a class="text-white" href="<?php echo esc_url(__('https://wordpress.org/', 'getonline')); ?>">
+			Copyright 2020 © baseEcom
+		</a>
+		<span class="sep text-white mx-2 text-4xl"> | </span>
+		<i class="fab fa-cc-discover mx-2 text-4xl"></i>
+		<i class="fab fa-cc-apple-pay mx-2 text-4xl"></i>
+		<i class="fab fa-cc-amex mx-2 text-4xl"></i>
+		<i class="fab fa-cc-paypal mx-2 text-4xl"></i>
+	</div><!-- .site-info -->
+</footer><!-- #colophon -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
 
 </body>
+
 </html>

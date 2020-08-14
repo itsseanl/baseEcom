@@ -19,6 +19,13 @@ get_header();
 <main id="primary" class="site-main">
     <!-- Hero Slider -->
     <?php get_template_part('template-parts/content', 'heroslider'); ?>
+    <div class="bg-gray-400 py-2">
+        <div class="custom-wrapper flex justify-between px-10 align-center m-5">
+            <?php get_template_part('template-parts/content', 'productcats'); ?>
+
+            <?php get_search_form(); ?>
+        </div>
+    </div>
     <!-- Featured Product Categories -->
     <?php get_template_part('template-parts/content', 'featuredcats'); ?>
 </main><!-- #main -->
