@@ -3691,7 +3691,6 @@ img,video{max-width:100%;height:auto}
 .site-branding{background:#fff;position:relative;width:100%;z-index:99;-webkit-box-shadow:0 2px 2px 2px rgba(0,0,0,0.3);box-shadow:0 2px 2px 2px rgba(0,0,0,0.3)}
 .site-branding .custom-wrapper{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
 .site-branding h1{text-decoration:underline}
-.current-menu-item>a{color:teal !important}
 .activate-mobile-nav{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;min-height:50px;cursor:pointer}
 .activatenavbar{border-radius:50px;margin:5px auto;height:5px;width:60px;-webkit-transition:.3s all;transition:.3s all}
 #primary-menu{margin:0}

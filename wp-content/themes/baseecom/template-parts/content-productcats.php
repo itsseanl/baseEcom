@@ -1,4 +1,4 @@
-<div class="product-cats flex justify-center align-center md:justify-start lg:justify-start px-2">
+<div class="product-cats flex flex-wrap py-4 justify-center align-center md:justify-start lg:justify-start px-2">
     <?php
     $choices = [];
 

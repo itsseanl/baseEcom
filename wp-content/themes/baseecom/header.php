@@ -35,7 +35,7 @@
 								the_custom_logo();
 								?> -->
 						<a href="/">
-							<h1 class="text-2xl">base<span class="text-teal-200 text-bold">Ecom</span></h1>
+							<h1 class="text-2xl">base<span class="header-accent-span text-teal-200 text-bold">Ecom</span></h1>
 						</a>
 
 					</div>
@@ -46,9 +46,9 @@
 							<span id="bar2" class="activatenavbar"></span>
 							<span id="bar3" class="activatenavbar"></span>
 						</div>
-						<a class="cart-customlocation hidden sm:hidden md:hidden lg:block" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e('View your shopping cart'); ?>"><?php echo sprintf(_n('%d item', '%d items', WC()->cart->get_cart_contents_count()), WC()->cart->get_cart_contents_count()); ?> - <?php echo WC()->cart->get_cart_total(); ?></a>
-						<a href="/cart/"><i class="fas fa-shopping-cart"></i></a>
-						<a href="/contact/"><i class="fas fa-envelope desktophide"></i></a>
+						<a class=" accent cart-customlocation hidden sm:hidden md:hidden lg:block" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e('View your shopping cart'); ?>"><?php echo sprintf(_n('%d item', '%d items', WC()->cart->get_cart_contents_count()), WC()->cart->get_cart_contents_count()); ?> - <?php echo WC()->cart->get_cart_total(); ?></a>
+						<a href="/cart/"><i class="fas fa-shopping-cart accent"></i></a>
+						<a href="/contact/"><i class="fas fa-envelope desktophide accent"></i></a>
 					</div>
 					<nav id="site-navigation" class="main-navigation">
 						<!-- <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('Primary Menu', 'getonline'); ?></button> -->

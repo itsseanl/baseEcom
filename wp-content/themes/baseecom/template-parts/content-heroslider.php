@@ -12,8 +12,8 @@
                                     if (!empty($image)) : ?>
                                         <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" class="object-cover object-center absolute h-full w-full z-100" style="max-height:500px;" />
                                     <?php endif; ?>
-                                    <div class="slide-overlay banner-cta relative px-8 py-10 my-8 mx-auto z-10 text-white border-solid border-1 rounded shadow-md border-gray-600md:text-center lg:w-full custom-wrapper flex flex-col justify-center content-center text-center" style="background:rgba(178, 245, 234,0.9);">
-                                        <h1 class="uppercase custom-text-shadow"><?php echo get_sub_field('slide_title'); ?></h1>
+                                    <div class="slide-overlay banner-cta relative px-8 py-10 my-8 mx-auto z-10 border-solid border-1 rounded shadow-md border-gray-600md:text-center lg:w-full custom-wrapper flex flex-col justify-center content-center text-center">
+                                        <h2 class="uppercase text-4xl my-1 custom-text-shadow accent"><?php echo get_sub_field('slide_title'); ?></h2>
                                         <p class="p-5 text-lg font-bold"><?php echo get_sub_field('slide_text'); ?></p>
                                         <?php
                                         $link = get_sub_field('slide_cta');
@@ -22,7 +22,7 @@
                                             $link_title = $link['title'];
                                             $link_target = $link['target'] ? $link['target'] : '_self';
                                         ?>
-                                            <a class="button m-auto my-5 bg-white p-2 sm:max-w-xs w-64 uppercase rounded shadow font-bold text-gray-600 z-40" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?></a>
+                                            <a class="button text-white m-auto my-5 p-2 sm:max-w-xs w-64 uppercase rounded shadow font-bold z-40" href="<?php echo esc_url($link_url); ?>" target="<?php echo esc_attr($link_target); ?>"><?php echo esc_html($link_title); ?></a>
                                         <?php endif; ?>
                                     </div>
 

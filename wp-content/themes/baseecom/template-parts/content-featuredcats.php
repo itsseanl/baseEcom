@@ -16,7 +16,7 @@
             $catSlug = get_category($catID);
     ?>
             <div class="featured-cat">
-                <h2 class=" pl-10 -mb-4 custom-text-shadow bg-gray-400 m-10 rounded" style="color:#808080; ">featured<span style="display:inline-block; margin:5px 2px 0px 5px;height:25px;background:#808080;width:3px;"></span><span class="text-teal-400 text-4xl text-bold uppercase text-shadow:none!important;"><?php echo $sub_value; ?></span></h2>
+                <h2 class="featured-heading-bg pl-10 -mb-4 custom-text-shadow bg-gray-400 m-10 rounded" style="color:#808080; ">featured<span style="display:inline-block; margin:5px 2px 0px 5px;height:25px;background:#808080;width:3px;"></span><span class="header-accent-span text-4xl text-bold uppercase text-shadow:none!important;"><?php echo $sub_value; ?></span></h2>
 
                 <?php echo do_shortcode('[products best_selling category="' . $catSlug->slug . '" limit="' . $productLimit . '"]'); ?>
             </div>
