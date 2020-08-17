@@ -152,6 +152,7 @@ function getonline_scripts()
 	wp_style_add_data('getonline-style', 'rtl', 'replace');
 
 
+
 	wp_enqueue_script('getonline-custom-vendor-js', get_template_directory_uri() . '/assets/js/vendor.min.js', array(), _S_VERSION);
 	wp_enqueue_script('getonline-custom-js', get_template_directory_uri() . '/assets/js/custom.min.js', array(), _S_VERSION);
 

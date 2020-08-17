@@ -66,6 +66,20 @@ body {
 	padding: 0;
 	margin: 0;
 }
+
+@font-face {
+	font-family: "Bebas";
+	src: url("/wp-content/themes/baseecom/assets/css/fonts/Bebas_Neue/BebasNeue-Regular.ttf")
+		format("truetype");
+	font-display: swap;
+}
+@font-face {
+	font-family: "Montserrat";
+	src: url("/wp-content/themes/baseecom/assets/css/fonts/montserrat/Montserrat-Regular.ttf")
+		format("truetype");
+	font-display: swap;
+}
+
 a {
 	text-decoration: none;
 	color: #333;
@@ -103,7 +117,13 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: "RobotoCondensed", sans-serif;
+	font-family: "Bebas", sans-serif;
+}
+
+p,
+a,
+li {
+	font-family: "montserrat", sans-serif;
 }
 
 i {
@@ -165,10 +185,6 @@ i {
 */
 
 #secondary {
-	display: flex;
-	flex-wrap: nowrap;
-	justify-content: flex-end;
-	align-items: flex-start;
 	.widget {
 		padding: 2em;
 		flex: 1 1 0px;
@@ -180,8 +196,16 @@ i {
 .widget > ul,
 .widget > div > ul {
 	padding-left: 0;
+	a {
+		width: 100%;
+	}
 }
 .widget > ul > li,
 .widget > div > ul > li {
 	padding: 5px 0;
+	width: 100%;
+
+	a {
+		width: 100%;
+	}
 }
