@@ -219,10 +219,21 @@ i {
 	ol {
 		display: flex;
 		flex-direction: column;
+		justify-content: stretch;
 		li {
 			width: 100% !important;
 			height: auto !important;
+			flex: 1 1 auto;
+			img {
+				object-fit: cover;
+				object-position: center;
+				height: 100%;
+			}
 		}
+	}
+	.flex-viewport {
+		height: 100% !important;
+		margin-bottom: 0 !important;
 	}
 }
 
@@ -245,4 +256,18 @@ section.related {
 
 .woocommerce-product-gallery__trigger {
 	right: 10em !important;
+}
+
+.woocommerce-product-gallery__image {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	a {
+		width: 100%;
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
 }
