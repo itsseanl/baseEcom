@@ -27,21 +27,22 @@
 		flex: 1 1 auto;
 	}
 }
-
-.onsale {
-	background: #73e6e6;
-	border-radius: 50%;
-	width: 3.5em;
-	height: 3.5em;
-	display: block;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	color: white;
-	position: absolute;
-	right: -25px;
-	margin-top: -2em;
+.woocommerce-LoopProduct-link {
+	.onsale {
+		border-radius: 50%;
+		width: 3.5em;
+		height: 3.5em;
+		display: block;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: white;
+		position: absolute;
+		right: -25px;
+		margin-top: -2em;
+	}
 }
+
 .woocommerce-LoopProduct-link {
 	width: 100%;
 	height: auto;

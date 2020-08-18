@@ -67,7 +67,16 @@ jQuery(document).ready(function () {
   var position = 2;
   var newChild = slides[slides.length - 1];
   var lastClicked = "";
-  theSlider.innerHTML = newChild.outerHTML + theSlider.innerHTML + slides[0].outerHTML;
+
+  if (newChild, slides.length > 0) {
+    theSlider.innerHTML = newChild.outerHTML + theSlider.innerHTML + slides[0].outerHTML;
+    setInterval(function () {
+      right();
+    }, 4000);
+    slideRight.addEventListener("click", right, false);
+    slideLeft.addEventListener("click", left, false);
+  }
+
   console.log("position: " + position + " count: " + count);
 
   function right() {
@@ -156,10 +165,4 @@ jQuery(document).ready(function () {
     lastClicked = left;
     return position, lastClicked;
   }
-
-  setInterval(function () {
-    right();
-  }, 4000);
-  slideRight.addEventListener("click", right, false);
-  slideLeft.addEventListener("click", left, false);
 });

@@ -185,6 +185,7 @@ i {
 */
 
 #secondary {
+	width: 100%;
 	.widget {
 		padding: 2em;
 		flex: 1 1 0px;
@@ -208,4 +209,40 @@ i {
 	a {
 		width: 100%;
 	}
+}
+
+.woocommerce-product-gallery {
+	display: flex;
+	.flex-viewport {
+		width: 80%;
+	}
+	ol {
+		display: flex;
+		flex-direction: column;
+		li {
+			width: 100% !important;
+			height: auto !important;
+		}
+	}
+}
+
+.woocommerce-product-gallery,
+.entry-summary {
+	width: 50%;
+	float: left;
+}
+
+section.related {
+	width: 100%;
+}
+
+.product > .onsale {
+	width: 100%;
+	display: block;
+	text-align: center;
+	color: white;
+}
+
+.woocommerce-product-gallery__trigger {
+	right: 10em !important;
 }
