@@ -1,0 +1,52 @@
+.quantity > input[type="button"] {
+	overflow: hidden;
+	position: relative;
+	background-color: #f9f9f9;
+	text-shadow: 1px 1px 1px #fff;
+	color: #666;
+	border: 1px solid #ddd;
+	text-transform: none;
+	font-weight: normal;
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+}
+
+.quantity input[type="number"] {
+	max-width: 2.5em;
+	width: 2.5em;
+	text-align: center;
+	border-radius: 0 !important;
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+	appearance: textfield;
+	font-size: 1em;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+}
+
+.text-center .quantity,
+.quantity {
+	opacity: 1;
+	display: inline-block;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	margin-right: 1em;
+	white-space: nowrap;
+	vertical-align: top;
+}
+
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.cart {
+	display: flex;
+}
+
+.variations_form {
+	display: flex;
+	flex-direction: column;
+}

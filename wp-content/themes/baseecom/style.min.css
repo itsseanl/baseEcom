@@ -3712,7 +3712,13 @@ img,video{max-width:100%;height:auto}
 .woocommerce-LoopProduct-link .onsale{border-radius:50%;width:3.5em;height:3.5em;display:block;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;color:white;position:absolute;right:-25px;margin-top:-2em}
 .woocommerce-LoopProduct-link{width:100%;height:auto}
 .woocommerce-LoopProduct-link img{width:100%;height:auto}
-.add_to_cart_button{background:#73e6e6;border-radius:2px;-webkit-box-shadow:1px 5px 9px 4px rgba(0,0,0,0.06);box-shadow:1px 5px 9px 4px rgba(0,0,0,0.06);text-align:center;color:white;text-transform:uppercase;font-weight:1.5em;padding:.5em;margin:1em 0;width:100%;margin-bottom:0}
+.add_to_cart_button,button{border-radius:2px;-webkit-box-shadow:1px 5px 9px 4px rgba(0,0,0,0.06);box-shadow:1px 5px 9px 4px rgba(0,0,0,0.06);text-align:center;color:white;text-transform:uppercase;font-weight:1.5em;padding:.5em;margin:1em 0;width:100%;margin-bottom:0}
+.quantity>input[type="button"]{overflow:hidden;position:relative;background-color:#f9f9f9;text-shadow:1px 1px 1px #fff;color:#666;border:1px solid #ddd;text-transform:none;font-weight:normal;padding-left:.5em;padding-right:.5em}
+.quantity input[type="number"]{max-width:2.5em;width:2.5em;text-align:center;border-radius:0 !important;-webkit-box-shadow:inset 0 1px 2px rgba(0,0,0,0.1);box-shadow:inset 0 1px 2px rgba(0,0,0,0.1);-webkit-appearance:textfield;-moz-appearance:textfield;appearance:textfield;font-size:1em;border-top:1px solid #ddd;border-bottom:1px solid #ddd}
+.text-center .quantity,.quantity{opacity:1;display:inline-block;display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;margin-right:1em;white-space:nowrap;vertical-align:top}
+.screen-reader-text{clip:rect(1px,1px,1px,1px);position:absolute !important;height:1px;width:1px;overflow:hidden}
+.cart{display:-webkit-box;display:-ms-flexbox;display:flex}
+.variations_form{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}
 *{-webkit-box-sizing:border-box;box-sizing:border-box}
 html,body{padding:0;margin:0}
 @font-face{font-family:"Bebas";src:url("/wp-content/themes/baseecom/assets/css/fonts/Bebas_Neue/BebasNeue-Regular.ttf") format("truetype");font-display:swap}
@@ -3753,6 +3759,13 @@ section.related{width:100%}
 .woocommerce-product-gallery__image{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;position:relative}
 .woocommerce-product-gallery__image a{width:100%}
 .woocommerce-product-gallery__image a img{width:100%;height:auto}
+.woocommerce-breadcrumb{padding-top:2.5rem;padding-bottom:2.5rem}
+.wc-tabs-wrapper{width:100%}
+.wc-tabs{display:-webkit-box;display:-ms-flexbox;display:flex;background:li;background-padding:1rem}
+.wc-tabs li.active a{border-bottom:1px solid #333}
+.product_meta{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}
+.woocommerce-variation-add-to-cart{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+.woocommerce-variation-add-to-cart button{width:auto;margin:0}
 @media(min-width:640px){.container{max-width:640px}
 .sm\:container{width:100%}
 .sm\:space-y-0>:not(template) ~ :not(template){--space-y-reverse:0;margin-top:calc(0px * calc(1 - var(--space-y-reverse)));margin-bottom:calc(0px * var(--space-y-reverse))}
@@ -18080,6 +18093,7 @@ section.related{width:100%}
 .xl\:animate-bounce{-webkit-animation:bounce 1s infinite;animation:bounce 1s infinite}
 }@media(max-width:800px){.products{-ms-flex-wrap:wrap;flex-wrap:wrap}
 .product{-webkit-box-flex:1;-ms-flex:1 1 auto;flex:1 1 auto}
+}@media(max-width:768px){.woocommerce-product-gallery,.entry-summary{width:100% !important;float:left}
 }@media(max-width:767px){#site-navigation{-webkit-transition:.5s all;transition:.5s all;width:100%}
 .menu-item-has-children>ul{opacity:0;max-height:0;width:100%;z-index:0}
 }@-webkit-keyframes spin{from{-webkit-transform:rotate(0);transform:rotate(0)}
