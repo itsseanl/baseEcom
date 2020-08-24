@@ -64,3 +64,21 @@ button {
 	width: 100%;
 	margin-bottom: 0;
 }
+
+.products {
+	overflow-y: auto;
+	max-width: 100%;
+}
+.type-product {
+	width: 100%;
+}
+
+.woocommerce-product-gallery__wrapper > figure {
+	width: 100%;
+}
+
+.cart > button {
+	width: 150px;
+	margin: auto;
+	margin-left: 0;
+}

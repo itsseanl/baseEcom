@@ -284,8 +284,14 @@ function baseecom_customize_css()
 		}
 
 		.accent,
-		.current_page_item {
+		.current_page_item,
+		.price {
 			color: <?php echo get_theme_mod('be_accent_color'); ?>;
+		}
+
+		.active,
+			{
+			border-bottom: 2px solid <?php echo get_theme_mod('be_accent_color'); ?>;
 		}
 
 		.sidebar-wrapper,
@@ -472,14 +478,21 @@ function woo_custom_description_tab($tabs)
 
 function woo_custom_description_tab_content()
 {
-	echo '<h2>' . the_title() . '</h2>';
-	echo '<p>Here\'s a custom description</p>';
-	woocommerce_template_single_title();
-	woocommerce_template_single_price();
-	woocommerce_template_single_add_to_cart();
+?>
+	<div class="tab-info p-2">
+		<?php
+		woocommerce_template_single_title();
+		woocommerce_template_single_excerpt();
+		woocommerce_template_single_price();
+		woocommerce_template_single_add_to_cart();
+		woocommerce_template_single_meta();
+		?>
+	</div>
+<?php
 }
-
 add_filter('woocommerce_product_description_tab_title', 'baseecom_rename_description_product_tab_label');
+
+
 
 function baseecom_rename_description_product_tab_label()
 {
@@ -560,3 +573,15 @@ function custom_quantity_fields_script()
 	</script>
 <?php
 }
+
+
+remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_title', 5);
+remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_rating', 10);
+remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_price', 10);
+remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20);
+remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40);
+remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_sharing', 50);
+remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30);
+//woocommerce_after_single_product_summary
+add_action('woocommerce_single_product_summary', 'woocommerce_output_product_data_tabs', 10);
+remove_action('woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10);

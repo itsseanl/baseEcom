@@ -9,6 +9,7 @@
 	font-weight: normal;
 	padding-left: 0.5em;
 	padding-right: 0.5em;
+	width: 45px;
 }
 
 .quantity input[type="number"] {
@@ -49,4 +50,32 @@
 .variations_form {
 	display: flex;
 	flex-direction: column;
+}
+
+.woocommerce-product-gallery > figure {
+	width: 100%;
+}
+
+.wc-tabs {
+	width: 100%;
+	background: #ebebeb;
+	li {
+		padding: 0.5rem;
+		transition: 0.3s all;
+		a {
+			font-size: 0.75rem;
+		}
+	}
+	.active {
+		background: #fff;
+	}
+}
+.wc-tabs li.active a {
+	border-bottom: none !important;
+	transition: 0.3s all;
+	font-weight: bold;
+}
+
+.price {
+	font-weight: bold;
 }
