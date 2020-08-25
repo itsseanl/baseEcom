@@ -122,7 +122,9 @@ function baseecom_customize_css()
 
         }
 
-        .header-accent-span {
+        .header-accent-span,
+        .related>h2,
+        #comments>h2 {
             color: <?php echo get_theme_mod('be_span_color'); ?>;
         }
 

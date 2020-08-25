@@ -39,10 +39,21 @@ function woo_custom_description_tab_content()
     </div>
 <?php
 }
+
+
+/**
+ * Remove product data tabs
+ */
+add_filter('woocommerce_product_tabs', 'woo_remove_product_tabs', 98);
+
+function woo_remove_product_tabs($tabs)
+{
+
+    unset($tabs['reviews']);             // Remove the reviews tab
+    return $tabs;
+}
+
 add_filter('woocommerce_product_description_tab_title', 'baseecom_rename_description_product_tab_label');
-
-
-
 function baseecom_rename_description_product_tab_label()
 {
     return the_title();
@@ -123,7 +134,7 @@ function custom_quantity_fields_script()
 <?php
 }
 
-
+// replace single product summary with data tabs
 remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_title', 5);
 remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_rating', 10);
 remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_price', 10);
@@ -133,9 +144,16 @@ remove_action('woocommerce_single_product_summary', 'woocommerce_template_single
 remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30);
 //woocommerce_after_single_product_summary
 add_action('woocommerce_single_product_summary', 'woocommerce_output_product_data_tabs', 10);
+
 remove_action('woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10);
 
+//add reviews after single product summary
+add_action('woocommerce_after_single_product_summary', create_function('$args', 'call_user_func(\'comments_template\');'), 14);
 
+/*
+ * Woocommerce Remove excerpt from single product
+ */
+add_action('woocommerce_after_single_product_summary', 'the_content', 10);
 
 /**
  * Change number of related products output

@@ -3730,8 +3730,11 @@ img,video{max-width:100%;height:auto}
 .wc-tabs .active{background:#fff}
 .wc-tabs li.active a{border-bottom:none !important;-webkit-transition:.3s all;transition:.3s all;font-weight:bold}
 .price{font-weight:bold}
-.related>h2{text-shadow:0 2px 2px rgba(0,0,0,0.1);padding-left:2.5rem;margin-bottom:-1rem;margin:2.5rem}
+.related,.product.type-product,.woocommerce-breadcrumb,.woocommerce-notices-wrapper,.woocommerce-Reviews{margin:auto 2.5rem}
+.woocommerce-Reviews{width:100%}
+.related>h2,#comments>h2{text-shadow:0 2px 2px rgba(0,0,0,0.1);padding-left:2.5rem;background:#e2e2e2;border-radius:.25rem;font-size:2.25rem}
 .related>.products .product{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center;padding:15px;margin:1em;-webkit-box-shadow:0 2px 8px 2px rgba(0,0,0,0.2);box-shadow:0 2px 8px 2px rgba(0,0,0,0.2)}
+.prod-info>p{margin:2.5rem}
 *{-webkit-box-sizing:border-box;box-sizing:border-box}
 html,body{padding:0;margin:0}
 @font-face{font-family:"Bebas";src:url("/wp-content/themes/baseecom/assets/css/fonts/Bebas_Neue/BebasNeue-Regular.ttf") format("truetype");font-display:swap}
