@@ -58,8 +58,14 @@ get_header('shop'); ?>
  *
  * @hooked woocommerce_get_sidebar - 10
  */
-do_action('woocommerce_sidebar');
 ?>
+<div class="sidebar-wrapper bg-gray-200">
+	<div class="custom-wrapper p-2">
+		<?php
+		do_action('woocommerce_sidebar');
+		?>
+	</div>
+</div>
 
 
 <?php
